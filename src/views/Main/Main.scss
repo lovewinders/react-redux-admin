@@ -1,0 +1,84 @@
+/**
+ *@Author: hy-zhangb
+ *Date: 2017-07-04 18:26
+ *@Last Modified by: zhangb
+ *@Last Modified time: 2017-07-04 18:26
+ *Email: lovewinders@163.com
+ *File Path: //
+ *@File Name: hiynn-admin
+ *@Description: 
+ */
+/* .header {
+   display: flex;
+   -webkit-box-pack: justify;
+   -ms-flex-pack: justify;
+   justify-content: space-between;
+ }*/
+
+.App {
+  height: 100%;
+  & > .ant-layout {
+    height: 100%;
+    .logo {
+      height: 65px;
+      line-height: 65px;
+      text-align: center;
+      border-bottom: 1px solid #615a5a;
+      .company-name {
+        font-size: 24px;
+        vertical-align: middle;
+        margin-left: 5px;
+      }
+    }
+  }
+  & > .ant-layout-has-sider {
+    & > .ant-layout-sider {
+      display: flex;
+      flex-flow: column;
+      overflow-y: auto;
+      & > .ant-menu-root {
+        overflow-x: hidden;
+        &::-webkit-scrollbar-thumb {
+          background-color: transparent;
+        }
+        &:hover::-webkit-scrollbar-thumb {
+          background-color: #777;
+        }
+      }
+    }
+    & > .ant-layout-sider-collapsed {
+      overflow-y: visible;
+      & > .ant-menu-root {
+        overflow-x: visible;
+      }
+      .company-name {
+        display: none;
+      }
+    }
+  }
+}
+.App .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+  color: rgba(0,0,0,.65);
+}
+
+.App .trigger:hover {
+  color: #108ee9;
+}
+
+.App .ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+}
+.ant-table {
+  .ant-table-thead > tr > th {
+    text-align: center;
+  }
+
+  .ant-table-tbody > tr > td {
+    text-align: center;
+  }
+}

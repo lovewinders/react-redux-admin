@@ -1,0 +1,39 @@
+/**
+ *@Author: hy-zhangb
+ *Date: 2017-05-25 11:49
+ *@Last Modified by: zhangb
+ *@Last Modified time: 2017-05-25 11:49
+ *Email: lovewinders@163.com
+ *File Path: //
+ *@File Name: tueasy-jiaoguan
+ *@Description: sass mixin fn
+ */
+//sass mixin
+@import 'utils/mixin';
+//font-awesome-4.7.0
+@import '../public/fonts/font-awesome-4.7.0/scss/font-awesome';
+
+/*global css - common module css*/
+.hy-fl { float:left;}
+.hy-fr { float:right;}
+.hy-clearfix:after { clear: both; content: ""; height:0; visibility: hidden; display: block;}
+
+//
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #777;
+}
+/*global css - main css*/
+.container {
+    height: 100%;
+    color: #333333;
+}
+.aaa {
+    border: none;
+    :focus {
+        outline: none !important;
+    }
+}

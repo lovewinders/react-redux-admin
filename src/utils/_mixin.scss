@@ -1,0 +1,99 @@
+/**
+ *@Author: hy-zhangb
+ *Date: 2017-05-25 11:49
+ *@Last Modified by: zhangb
+ *@Last Modified time: 2017-05-25 11:49
+ *Email: lovewinders@163.com
+ *File Path: //
+ *@File Name: tueasy-jiaoguan
+ *@Description: sass mixin fn
+ */
+ //依赖的图层层级
+@mixin all-zIndex {
+  z-index: 3;
+}
+//依赖的定位
+@mixin all-position ($p, $t:null, $r:null, $b:null, $l:null) {
+  position: $p;
+  top: $t;
+  right: $r;
+  bottom: $b;
+  left: $l;
+}
+//message-box的theme
+@mixin message-theme ($mt-color1, $mt-color2, $mt-color3) {
+  .mark-box {
+    border-left: 1px solid rgba($mt-color1, 1);
+    .mark-commend {
+      color: rgba($mt-color1, 1);
+    }
+    .mark-rect {
+      .para {
+        background-color: rgba(255,255,255, 0.3);
+        border-top: 1px solid rgba($mt-color1, 1);
+        border-right: 1px solid rgba($mt-color1, 1);
+      }
+      .rect {
+        background-color: rgba(255,255,255, 0.3);
+        border-right: 1px solid rgba($mt-color1, 1);
+      }
+    }
+  }
+  .con-info {
+    background-color: rgba($mt-color1, 1);
+    border: 1px solid rgba($mt-color1, 1);
+    .text {
+      background-color: rgba($mt-color2, 0.8);
+      h5 {
+        background-color: rgba($mt-color1, 0.5);
+      }
+      .text-info {
+        position: relative;
+        .arrow {
+          display: block;
+          width: 0;
+          height: 0;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          border-top: 10px solid $mt-color1;
+          position: absolute;
+          left: 50%;
+          bottom: -10px;
+          margin-left: -5px;
+        }
+      }
+    }
+  }
+  .con-icon {
+    border: 1px solid rgba($mt-color1, 1);
+    background-color: rgba($mt-color2, 1);
+    color: rgba($mt-color3, 1);
+  }
+}
+//正方形边框4个角叠加样式
+@mixin grid-four-points ($gf-pw, $gf-ph, $gf-top:null, $gf-right:null, $gf-bottom:null, $gf-left:null) {
+  &:before {
+    display: block;
+    content: "";
+    width: $gf-pw;
+    height: $gf-ph;
+    background: rgba(157, 235, 235, 0.9);
+    position: absolute;
+    top: $gf-top;
+    right: $gf-right;
+    bottom: $gf-bottom;
+    left: $gf-left;
+  }
+  &:after {
+    display: block;
+    content: "";
+    width: $gf-ph;
+    height: $gf-pw;
+    background: rgba(157, 235, 235, 0.9);
+    position: absolute;
+    top: $gf-top;
+    right: $gf-right;
+    bottom: $gf-bottom;
+    left: $gf-left;
+  }
+}
